@@ -1,0 +1,33 @@
+ <div class="small-4 columns">  feekwmfkm </div>
+
+
+<div class="small-4 columns">  
+             
+    <ul>
+                       
+        <li ng-repeat="movie in courseInfo | filter: inputValue | orderBy: orderProp : reverse">
+                            
+            <div class="row">
+
+                  <div class="small-4 columns">
+                                      
+                    <img src="data/images/{{movie.imdbID}}.jpg" >
+
+                  </div>
+
+                  <div class="small-8 columns">
+                                      
+                      <h6> {{movie.title}} </h2>
+                      <h6> Rank: {{movie.rank}} </h1>
+
+                  </div>
+
+            </div>
+                            
+        </li>
+                    
+    </ul>
+                               
+</div>
+
+<div class="small-4 columns">ewfekwmfk</div>
