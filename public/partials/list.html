@@ -1,17 +1,17 @@
- <div class="small-4 columns">  feekwmfkm </div>
 
 
-<div class="small-4 columns">  
-             
-    <ul>
+
+<div class="small-12 columns">  
+             {{$parent.reverse}}
+   <ul class="small-block-grid-1">
                        
-        <li ng-repeat="movie in courseInfo | filter: inputValue | orderBy: orderProp : reverse">
+        <li ng-repeat="movie in courseInfo | filter: inputValue | orderBy: $parent.orderProp : $parent.reverse" class="listDiv">
                             
             <div class="row">
 
                   <div class="small-4 columns">
                                       
-                    <img src="data/images/{{movie.imdbID}}.jpg" >
+                    <img href= "#/movies/{{movie.imdbID}}" class="listImage" src="data/images/{{movie.imdbID}}.jpg" >
 
                   </div>
 
@@ -30,4 +30,3 @@
                                
 </div>
 
-<div class="small-4 columns">ewfekwmfk</div>

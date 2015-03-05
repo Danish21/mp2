@@ -20,9 +20,10 @@ app.controller('movieController', ['$scope', '$http', function($scope, $http) {
     $scope.setFalse= function(){
     	$scope.reverse = false;
     	console.log("settingTrue");
+        console.log($scope.reverse);
     }
    $scope.setGenreFilter = function(newGenre){
-    	$scope.genre = newGenre; 
+    	$scope.$parent.genre = newGenre; 
     	console.log(newGenre);
     }
 }]);

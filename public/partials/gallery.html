@@ -1,0 +1,39 @@
+      <div class="row">
+          
+          <div class="large-12 columns text-center">
+            <ul class="button-group">
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('')">All</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Action')">Action</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Adventure')">Adventure</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Crime')">Crime</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Comedy')">Comedy</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Drama')">Drama</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Musical')">Musical</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Mystery')">Mystery</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Romance')">Romance</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Sci-Fi')">Sci-Fi</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Thriller')">Thriller</a></li>
+              <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Western')">Western</a></li>
+            </ul>
+          </div>
+  
+      </div>
+    
+
+      <div class="row"> 
+
+         <div class="small-12 columns">  
+             
+                  <ul class="small-block-grid-5">
+                       
+                          <li ng-repeat="movie in courseInfo | filter: inputValue | filter: $parent.genre | orderBy: $parent.orderProp : $parent.reverse">
+                              
+                              <img src="data/images/{{movie.imdbID}}.jpg" >
+                            
+                          </li>
+                     
+                  </ul>
+                               
+          </div>
+
+      </div>
