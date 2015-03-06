@@ -26,7 +26,7 @@
              
                   <ul class="small-block-grid-5">
                        
-                          <li ng-repeat="movie in courseInfo | filter: inputValue | filter: $parent.genre | orderBy: $parent.orderProp : $parent.reverse">
+                          <li ng-repeat="movie in courseInfo | filter: inputValue | filter: $parent.genre | orderBy: $parent.orderProp : $root.reverse">
                               
                               <img src="data/images/{{movie.imdbID}}.jpg" >
                             

@@ -2,23 +2,24 @@
 
 
 <div class="small-12 columns">  
-             {{$parent.reverse}}
+             
    <ul class="small-block-grid-1">
                        
-        <li ng-repeat="movie in courseInfo | filter: inputValue | orderBy: $parent.orderProp : $parent.reverse" class="listDiv">
+        <li ng-repeat="movie in courseInfo | filter: inputValue | orderBy: $parent.orderProp : $root.reverse" class="listDiv">
                             
             <div class="row">
 
                   <div class="small-4 columns">
-                                      
-                    <img href= "#/movies/{{movie.imdbID}}" class="listImage" src="data/images/{{movie.imdbID}}.jpg" >
-
+                    <a href="#/movies/{{movie.imdbID}}">             
+                    <img class="listImage" src="data/images/{{movie.imdbID}}.jpg" >
+                    </a>
                   </div>
 
                   <div class="small-8 columns">
                                       
                       <h6> {{movie.title}} </h2>
                       <h6> Rank: {{movie.rank}} </h1>
+                      <!-- {{$root.reverse}} -->
 
                   </div>
 

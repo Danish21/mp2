@@ -13,7 +13,7 @@
 
   </head>
 
-  <body ng-app="movieApp" ng-controller="movieController">
+  <body ng-app="movieApp" ><!-- ng-controller="movieController" -->
       
       <div class="row">
         
@@ -39,9 +39,9 @@
                   
                   <div class="row">
                      
-                      <div class="small-12 collumn">
+                      <div class="small-12 collumn" >
                         Sort by:
-                          <select ng-model="orderProp">
+                          <select ng-model="orderProp" >
                             <option value="title">Title</option>
                             <option value="rank">Rank</option>
                           </select>
@@ -52,10 +52,10 @@
           
                   <div class="row">
 
-                      <div class="small-12 collumn text-center">
+                      <div class="small-12 collumn text-center" ng-controller="movieListController" >
                           <!-- <label>OrderBy</label> -->
                           <input type="radio" name="order" id="ascending" ng-click="setFalse()"><label for="ascending">Ascending</label>
-                          <input type="radio" name="order" id="descending"ng-click="setTrue()"><label for="descending">Descending</label>
+                          <input type="radio" name="order" id="descending"ng-click="setTrue()"><label for="descending">Descending</label> <!-- {{$root.reverse}} -->
                       </div>
 
                   </div>
@@ -77,53 +77,6 @@
 
       </div>
 
-<!-- 
-      </div>
-       <div class="row">
-          
-          <div class="large-12 columns">
-            <ul class="button-group">
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('')">All</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Action')">Action</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Adventure')">Adventure</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Crime')">Crime</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Comedy')">Comedy</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Drama')">Drama</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Musical')">Musical</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Mystery')">Mystery</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Romance')">Romance</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Sci-Fi')">Sci-Fi</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Thriller')">Thriller</a></li>
-              <li><a href="#" class="button tiny" ng-click="setGenreFilter('Western')">Western</a></li>
-            </ul>
-          </div>
-
-          
-            
-      </div>
-    
-
-
-      <div class="row"> 
-
-     
-
-
-         <div class="small-12 columns">  
-             
-                  <ul class="small-block-grid-5">
-                       
-                          <li ng-repeat="movie in courseInfo | filter: inputValue | filter: genre | orderBy: orderProp : reverse">
-                              
-                              <img src="data/images/{{movie.imdbID}}.jpg" >
-                            
-                          </li>
-                     
-                  </ul>
-                               
-          </div>
-
-      </div> -->
 
       <div class="row" ng-view>
 

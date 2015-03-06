@@ -1,4 +1,4 @@
-var app = angular.module('movieApp',['ngRoute']) ;
+var app = angular.module('movieApp',['ngRoute', 'movieControllers']) ;
 
 // app.config(function($routeProvider){
 
@@ -13,15 +13,15 @@ app.config(['$routeProvider',
     $routeProvider.
       when('/movies', {
         templateUrl: 'partials/list.html',
-        controller: 'movieController'
+        controller: 'movieListController'
       }).
       when('/gallery', {
         templateUrl: 'partials/gallery.html',
-        controller: 'movieController'
+        controller: 'movieListController'
       }).
       when('/movies/:imdbID', {
         templateUrl: 'partials/details.html',
-        controller: 'movieController'
+        controller: 'movieDetailController'
       }).
       otherwise({
         redirectTo: '/movies'
