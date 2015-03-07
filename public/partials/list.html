@@ -1,12 +1,53 @@
 
 
+<div class="row text-center"> 
 
+        <div class="small-12 columns text-center" >
+              
+              <form>
+
+                <fieldset>
+
+                  <div class="row">
+                      <div class="small-12 collumn text">
+                        Search:<input type="text" ng-model="inputValue"/>
+                      </div>
+                  </div>
+                  
+                  <div class="row">
+                     
+                      <div class="small-12 collumn" >
+                        Sort by:
+                          <select ng-model="orderProp" >
+                            <option value="title">Title</option>
+                            <option value="rank">Rank</option>
+                          </select>
+                      </div>
+
+                  </div>
+                  
+          
+                  <div class="row">
+
+                      <div class="small-12 collumn text-center">
+                          <!-- <label>OrderBy</label> -->
+                          <input type="radio" name="order" id="ascending" ng-click="setFalse()"><label for="ascending">Ascending</label>
+                          <input type="radio" name="order" id="descending"ng-click="setTrue()"><label for="descending">Descending</label> <!-- {{$root.reverse}} -->
+                      </div>
+
+                  </div>
+
+
+                </fieldset>
+
+              </form>
+        </div>
 <div class="small-12 columns">  
              
    <ul class="small-block-grid-1">
                        
-        <li ng-repeat="movie in courseInfo | filter: inputValue | orderBy: $parent.orderProp : $root.reverse" class="listDiv">
-                            
+        <li ng-repeat="movie in courseInfo | filter: inputValue | orderBy: orderProp : reverse" class="listDiv">
+                
             <div class="row">
 
                   <div class="small-4 columns">
@@ -19,7 +60,7 @@
                                       
                       <h6> {{movie.title}} </h2>
                       <h6> Rank: {{movie.rank}} </h1>
-                      <!-- {{$root.reverse}} -->
+                      
 
                   </div>
 

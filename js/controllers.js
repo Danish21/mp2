@@ -2,7 +2,7 @@ var demoApp = angular.module('demoApp', []);
 
 var movieControllers = angular.module('movieControllers',[]);
 
-movieControllers.controller('movieListController', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
+movieControllers.controller('movieListController', ['$scope', '$http', '$rootScope', function($scope, $http) {
 
     $http.get('./data/imdb250.json').success(function(data) {
     $scope.courseInfo = data;
@@ -11,19 +11,19 @@ movieControllers.controller('movieListController', ['$scope', '$http', '$rootSco
 
     $scope.orderProp = 'rank';
     $scope.myBool = 'false';
-    $rootScope.reverse = false;
+    $scope.reverse = false;
 
     $scope.genre = "";
     $scope.setTrue= function(){
-        $rootScope.reverse = true;
+        $scope.reverse = true;
         console.log("settingFalse");
-        console.log($rootScope.reverse);
+        console.log($scope.reverse);
     }
 
     $scope.setFalse= function(){
-        $rootScope.reverse = false;
+        $scope.reverse = false;
         console.log("settingTrue");
-        console.log($rootScope.reverse);
+        console.log($scope.reverse);
     }
    $scope.setGenreFilter = function(newGenre){
         $scope.$parent.genre = newGenre; 
@@ -42,7 +42,7 @@ movieControllers.controller('movieListController', ['$scope', '$http', '$rootSco
 movieControllers.controller('movieDetailController', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
         $http.get('./data/imdb250.json').success(function(data) {
-        $scope.movie = data;
+         $scope.movies = data;
     });
 
         $scope.imdbID = $routeParams.imdbID;

@@ -24,14 +24,14 @@
 
          <div class="small-12 columns">  
              
-                  <ul class="small-block-grid-5">
-                       
-                          <li ng-repeat="movie in courseInfo | filter: inputValue | filter: $parent.genre | orderBy: $parent.orderProp : $root.reverse">
-                              
-                              <img src="data/images/{{movie.imdbID}}.jpg" >
+                  <ul class="small-block-grid-5">  
+                          <li ng-repeat="movie in courseInfo | filter: inputValue | filter: $parent.genre">
+
+                              <a href="#/movies/{{movie.imdbID}}">             
+                                 <img src="data/images/{{movie.imdbID}}.jpg" >
+                              </a>
                             
                           </li>
-                     
                   </ul>
                                
           </div>

@@ -1,15 +1,26 @@
 <div class="row">
 
-	<div class="small-4 columns">
-		<!-- fkrkmfkmrkfmk -->
-	</div>
+	<!-- <div class="small-4 columns">
+		fdd
+	</div> -->
 
-	<div class="small-8 columns">
+	<div class="small-12 columns">
 			
 		<div class="row">
 			<div class="small-12 columns">
-				<h1>Inception is the right</h1>
-				<h1>Rank:67</h1>
+				
+				<ul>
+					<li ng-repeat="movie in movies | filter: imdbID">
+						<a href= "#/movies/{{ movies[ (movie.rank-2) ].imdbID }}">  
+							<i class="fa fa-arrow-circle-left arrows"></i>
+						</a> 
+						<a href= "#/movies/{{ movies[ (movie.rank) ].imdbID }}">  
+							<i class="fa fa-arrow-circle-right arrows right"></i>
+						</a>
+						<h3 class="text-center">{{movie.title}}</h3>
+						<h3 class="text-center">Rank: {{movie.rank}}</h3>
+					</li>
+				</ul>	
 			</div>
 		</div>
 
@@ -18,19 +29,22 @@
 				<img class="listImage" src="data/images/{{imdbID}}.jpg" >
 			</div>
 			<div class="small-8 columns">
-				<h6>rfjenkjrnfjernfkjrekjferkfkrefkerfkjkrfkjernernfkjnerj</h6>
-				<h6>ejfnjkrnfkjrnjkfnrjkfnkjrnfknfjnrfnkjrfkrrkjfnjkrnfjknrf</h6>
-				<h6>erfejrbfjrfjrkje</h6>
-				<h6>erfejrbfjrfjrkje</h6>
-				<h6>erfejrbfjrfjrkje</h6>
+				<ul>
+					<li ng-repeat="movie in movies | filter: imdbID">
+						<h6>{{movie.plot}}</h6>
+						<h6>ReleaseDate: {{movie.released}}</h6>
+						<h6>Runtime: {{movie.runtime}}</h6>
+						<h6>Awards: {{movie.awards}}</h6>
+					</li>
+				</ul>
 			</div>
 		</div>
 					
 	</div>
 
-	<div class="small-4 columns">
-		<!-- krkmfkmrkfmk -->
-	</div>
+	<!-- <div class="small-4 columns">
+		
+	</div> -->
 
 </div>
 
