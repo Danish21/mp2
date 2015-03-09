@@ -1,6 +1,6 @@
 var demoApp = angular.module('demoApp', []);
 
-var movieControllers = angular.module('movieControllers',[]);
+var movieControllers = angular.module('movieControllers',['ngAnimate']);
 
 movieControllers.controller('movieListController', ['$scope', '$http', '$rootScope', function($scope, $http) {
 

@@ -1,6 +1,6 @@
       <div class="row">
           
-          <div class="large-12 columns text-center">
+          <div class="large-12 columns text-center" id="buttonCollumn">
             <ul class="button-group">
               <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('')">All</a></li>
               <li><a href="#/gallery" class="button tiny" ng-click="setGenreFilter('Action')">Action</a></li>
@@ -22,10 +22,10 @@
 
       <div class="row"> 
 
-         <div class="small-12 columns">  
+         <div class="small-10 small-centered columns">  
              
                   <ul class="small-block-grid-5">  
-                          <li ng-repeat="movie in courseInfo | filter: inputValue | filter: $parent.genre">
+                          <li ng-repeat="movie in courseInfo | filter: inputValue | filter: $parent.genre" class="repeated-movie">
 
                               <a href="#/movies/{{movie.imdbID}}">             
                                  <img src="data/images/{{movie.imdbID}}.jpg" >

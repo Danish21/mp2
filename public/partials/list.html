@@ -2,7 +2,7 @@
 
 <div class="row text-center"> 
 
-        <div class="small-12 columns text-center" >
+        <div class="small-8 small-centered columns text-center" >
               
               <form>
 
@@ -42,11 +42,11 @@
 
               </form>
         </div>
-<div class="small-12 columns">  
+<div class="small-8 small-centered columns">  
              
    <ul class="small-block-grid-1">
                        
-        <li ng-repeat="movie in courseInfo | filter: inputValue | orderBy: orderProp : reverse" class="listDiv">
+        <li ng-repeat="movie in courseInfo | filter: inputValue | orderBy: orderProp : reverse" class="listDiv" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
                 
             <div class="row">
 

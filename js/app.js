@@ -1,4 +1,6 @@
-var app = angular.module('movieApp',['ngRoute', 'movieControllers']) ;
+
+var animations = angular.module('movieAppAnimations', ['ngAnimate']);
+var app = angular.module('movieApp',['ngRoute','movieAppAnimations', 'movieControllers']) ;
 
 // app.config(function($routeProvider){
 
