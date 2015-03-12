@@ -62,6 +62,13 @@ $(document).ready(function(){
 
 	loopTimer2 = setInterval(frameLooper2,70);
 
+	$('a[href*=#]').click(function(event){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top -30
+	    }, 500);
+	    event.preventDefault();
+	});
+
 	// $(window).resize(function() {
 	// 	headerHeight = $(window).height();
 	// 	$("#dynamicText").css('top', ""+ (headerHeight/2)+"px" );

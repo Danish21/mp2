@@ -47,69 +47,7 @@
 
 
 ///animations
-.view-container {
-  position: relative;
-}
 
-.view-frame.ng-enter, .view-frame.ng-leave {
-  background: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.view-frame.ng-enter {
-  -webkit-animation: 5s fade-in;
-  -moz-animation: 5s fade-in;
-  -o-animation: 5s fade-in;
-  animation: 5s fade-in;
-  z-index: 100;
-}
-
-.view-frame.ng-leave {
-  -webkit-animation: 5s fade-out;
-  -moz-animation: 5s fade-out;
-  -o-animation: 5s fade-out;
-  animation: 5s fade-out;
-  z-index:99;
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@-moz-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@-webkit-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@-moz-keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@-webkit-keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
-.animate-enter {
-	-webkit-transition: 1s linear all; /* Chrome */
-	transition: 1s linear all;
-	opacity: 0;
-}
- 
-.animate-enter.animate-enter-active {
-	opacity: 1;
-}
 // .listDiv{
 // 	background-color: grey;
 // }
@@ -128,21 +66,46 @@ header{
 	background-attachment:fixed;
 	background-position: center center;
 	background-size: cover;
+
 }
+
+
+
 #wikiButton{
 	background-color: #af0606;
 }
 #wikiButton:hover{
-	background-color: #FF7619;
+	background-color: #333333;
 }
-.hello{
-	// border: solid red;
-}
+
 
 #dynamicText{
 	color: white;
 	font-size: 28px;
 	margin-top: 40%;
+}
+
+.title{
+	color: #af0606;//#555555;//rgb(46, 59, 78);
+	// font-size: 28px;
+	line-height: $defaultLineHeight;
+	font-weight: $defaultFontWeight;
+	margin-top: 100px;
+	font-family: $headingFont;
+	margin-bottom: 20px;
+}
+
+
+.subTitle {
+	color: rgb(46, 59, 78);
+	text-align: center;
+	position: relative;
+	// font-size: 19px;
+	line-height: $defaultLineHeight;
+	font-weight: $defaultFontWeight;
+	margin-top: 5px;
+	font-family: $subHeadingFont;
+	margin-bottom: 60px;
 }
 
 .imageWrapper {
@@ -187,51 +150,17 @@ header{
 	top: 60px;
 	left: 10px;
 	font-size: 8px;
-	// border: solid blue;
+	font-family: $menuFonts;
 }
 #imageWrapper3 #dynamicReviewWrapper h4 {
-	// position: absolute;
-	// top: 60px;
-	// left: 10px;
 	font-size: 8px;
 }
 
-.missionSubtitle {
-	font-size: 19px;
+#missionSubtitle {
+	// font-size: 19px;
 	color: rgb(46, 59, 78);
-	font-family: $smallTextFont;
+	font-family: $menuFonts;
 }
-#MissionTitle{
-	color: rgb(46, 59, 78);
-	font-size: 28px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
-	margin-top: 50px;
-	margin-bottom: 30px;
-	font-family: $headingFont;
-}
-#teamTitle {
-	color: rgb(46, 59, 78);
-	// text-align: center;
-	// position: relative;
-	font-size: 28px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
-	margin-top: 50px;
-	font-family: $headingFont;
-}
-
-#teamSubTitle {
-	color: rgb(46, 59, 78);
-	text-align: center;
-	position: relative;
-	font-size: 19px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
-	margin-top: 5px;
-	font-family: $subHeadingFont;
-}
-
 
 .employeeName {
 	color: rgb(46, 59, 78);
@@ -241,7 +170,7 @@ header{
 	line-height: $defaultLineHeight;
 	font-weight: $defaultFontWeight;
 	margin-top: 5px;
-	font-family: $smallTextFont;
+	font-family: $menuFonts;
 }
 
 
@@ -260,33 +189,6 @@ header{
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 
 
-
-
-#subcriptionSection{
-	background-color: rgb(181, 181, 183);
-	margin-top: 80px;
-}
-
-
-#subscribeText {
-	color: rgb(64, 64, 64);
-	font-size: 16px;
-	line-height: 1.75em;
-	font-family: $textFont;
-	margin-bottom: 15px;
-}
-
-
-#subscriptHeading {
-	color: black;
-	font-size: 36px;
-	line-height: 1.75em;
-	font-family: $headingFont;
-}
-
-#subscriptionSubHeading{
-	font-family: $smallTextFont;
-}
 
 #iconWrapper {
 	position: relative;
@@ -312,33 +214,27 @@ header{
 	color: white;
 
 }
-#recTitleWrapper{
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
 
-#recTitle{
-	color: rgb(46, 59, 78);
-	font-size: 28px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
-	margin-top: 50px;
-	font-family: $headingFont;
-}
 #chefImage{
 	// border: solid red;
 	margin: 0 auto 0 auto;
 }
-#restraunt{
-	// border: solid blue;
+#myBlockQuote{
+	font-family: $menuFonts;
 }
-#collumn1{
-	// border: solid black;
+#myBlockQuote i{
+	font-size: 10px;
+}
+#meetTheTeam{
+	// margin-bottom: 125px;
+}
+#teamTitle{
+	margin-top: 50px;
+}
+#videoSection{
+	margin-bottom: 20px;
 }
 
-#meetTheTeam{
-	margin-bottom: 125px;
+#videoSubTitle{
+	margin-bottom: 20px;
 }
-// .seachBox{
-// 	margin: 0 auto 0 auto;
-// }

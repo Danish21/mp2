@@ -220,7 +220,7 @@ $row-width: 100%; //rem-calc(1000);
 // $h2-font-reduction: rem-calc(10);
 // $h3-font-reduction: rem-calc(5);
 // $h4-font-reduction: rem-calc(5);
-// $h5-font-reduction: 0;
+   $h5-font-reduction: rem-calc(3);
 // $h6-font-reduction: 0;
 
 // These control how subheaders are styled.
@@ -911,13 +911,13 @@ $row-width: 100%; //rem-calc(1000);
 // $orbit-timer-show-progress-bar: true;
 
 // We use these to control the bullet nav styles
-// $orbit-bullet-nav-color: $iron;
+$orbit-bullet-nav-color: #af0606;
 // $orbit-bullet-nav-color-active: $aluminum;
 // $orbit-bullet-radius: rem-calc(9);
 
 // We use these to controls the style of slide numbers
 // $orbit-slide-number-bg: rgba(0,0,0,0);
-// $orbit-slide-number-font-color: $white;
+$orbit-slide-number-font-color: rgba(0,0,0,0);
 // $orbit-slide-number-padding: rem-calc(5);
 
 // Graceful Loading Wrapper and preloader

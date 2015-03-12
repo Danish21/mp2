@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="./foundation/css/foundation.css">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-   <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Rancho" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Gudea" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
@@ -19,7 +21,7 @@
 		<nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: [small,medium,large]">
 		  <ul class="title-area">
 		    <li class="name">
-		      <h1><a href="#"><img src="data/pics/mainLogo.png" class="mainLogo"/></a></h1>
+		      <h1><a href="#"><img src="data/pics/mainLogoWhite.png" class="mainLogo"/></a></h1>
 		    </li>
 		   <!--  <li class="name">Help change Menus</li> -->
 		     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -33,24 +35,24 @@
 		      
 		    </ul>
 		    <ul class="right">
-		      <li><a href="#">Mission</a></li>
+		      <li><a href="#missionSection">Mission</a></li>
 		      <li class="divider"></li>
-		      <li><a href="#">Business</a></li>
+		      <li><a href="#restrauntSection">Business</a></li>
 		      <li class="divider"></li>
-		      <li><a href="#">Team</a></li>
+		      <li><a href="#teamSection">Team</a></li>
 		      <li class="divider"></li>
-		      <li><a href="#">Sign Up</a></li>
+		      <li><a href="#videoSection">See It In Action</a></li>
 		      <li class="divider"></li>
-		      <li><a href="#">Contacts</a></li>
+		      <li><a href="#contactSection">Contacts</a></li>
 		      <li class="divider"></li>
 		    </ul>
 		  </section>
 		</nav>
 	</div>
 	
+
 	<header class="row">
-		
-				
+			
 				<div class="small-7 small-centered columns" id="searchBox">
 
 					<h2 id="dynamicText" class="text-center"></h2>
@@ -68,165 +70,204 @@
 			
 
 	</header>
-	 
-	<div class="row">
-		<div class="small-12 columns text-center">
-			<h3 id="MissionTitle">Let's tell the world know exactly what's good and what's not!</h3>
+	<!-- <div id="missionAnchor"></div> -->
+	<div class="row" id="missionSection">
+		<div class="small-12 columns">
+			
+			<div class="row">
+				<div class="small-10 small-centered columns text-center">
+					<h3 class="title">Let's tell the world know exactly what's good and what's not!</h3>
+					<h4 class="subTitle"> Ever wonder what to eat at a restraunt? Wikimenus hopes to solve the problem. We have millions of review on actual menu items. At a restraunt already? Join the movement! Its easy as three steps: </h4>
+				</div>
+			</div>
+
+
+			<div class="row">
+				
+				<div class="small-12 medium-4 large-4 columns text-center">
+					<h5 id="missionSubtitle"> Just open our app</h5>
+					<div class="imageWrapper" id="imageWrapper1">
+						<img src="data/pics/iphoneScreen.png" width="100px" height="200px">
+						<img id ="iphoneLogo" src="data/pics/mainLogo.png">
+					</div>
+				</div>
+
+				<div class="small-12 medium-4 large-4 columns text-center">
+					<h5 id="missionSubtitle"> We'll open the menu </h5>
+					<div class="imageWrapper" id="imageWrapper2">
+						<img src="data/pics/iphoneTracked.png" width="200px" height="200px">
+					</div>
+				</div>
+
+				<div class="small-12 medium-4 large-4 columns text-center">
+					<h5 id="missionSubtitle">  Tell us how it is</h5>
+					<div class="imageWrapper" id="imageWrapper3">
+						<img src="data/pics/iphoneScreen.png" width="100px" height="200px">
+						<h3> BBQ Chicken Pizza</h3>
+						<div id="dynamicReviewWrapper">
+							<h4 id="dynamicReview"> </h2>
+						</div>
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</div>
 
-	<div class="row	hello">
-		
-		<div class="small-12 medium-4 large-4 columns text-center">
-			<h1 class="missionSubtitle"> Just open our app</h1>
-			<div class="imageWrapper" id="imageWrapper1">
-				<img src="data/pics/iphoneScreen.png" width="100px" height="200px">
-				<img id ="iphoneLogo" src="data/pics/mainLogo.png">
+	<div class="row" id="restrauntSection">
+		<div class="small-12 columns">	
+			<div class="row">
+					<div class="small-10 small-centered columns text-center">
+						<h3 class="title">The best chefs and restraunts love wikiMenus! </h3>
+						<h4 class="subTitle"> If you own a restraunt you can personally work with us to provide your customers with your most up to date menus. Thats not all! We will provide with an interface that will give you the most up to date data on exactly which menu items are good and whats not. Don't think you need it, look what some of your contemporaries have to say about us. </h4>
+							
+					</div>
 			</div>
-		</div>
+			
+			<div class="row">
+				<div class="small-10 small-centered columns text-center">
+					<ul class="example-orbit-content" data-orbit>
+					  
+					  <li data-orbit-slide="headline-1">
+					    
+					    <div class="row" id="restraunt">
 
-		<div class="small-12 medium-4 large-4 columns text-center">
-			<h1 class="missionSubtitle"> We'll open the menu </h1>
-			<div class="imageWrapper" id="imageWrapper2">
-				<img src="data/pics/iphoneTracked.png" width="200px" height="200px">
-			</div>
-		</div>
+					      <div class="small-4 columns text-center" id="collumn1">
+					      	<!-- <h1>Gordon Ramsey</h1> -->
+					 
+					      	<img class= "text-center"src="data/pics/ramsay.png" id="chefImage" width="50%" height="50%">
 
-		<div class="small-12 medium-4 large-4 columns text-center">
-			<h1 class="missionSubtitle">  Tell us how it is</h1>
-			<div class="imageWrapper" id="imageWrapper3">
-				<img src="data/pics/iphoneScreen.png" width="100px" height="200px">
-				<h3> BBQ Chicken Pizza</h3>
-				<div id="dynamicReviewWrapper">
-					<h4 id="dynamicReview"> </h2>
+					      </div>
+
+					      <div class="small-8 columns text-center">
+					      	<h5><blockquote id="myBlockQuote"><i class="fa fa-quote-left fa-3x pull-left fa-border"></i>
+							...tomorrow we will run faster, stretch out our arms farther...
+							And then one fine morning— So we beat on, boats against the
+							current, borne back ceaselessly into the past. </i> <i class="fa fa-quote-right fa-3x pull-right fa-border"></i></blockquote></h5>
+							<h2><blockquote><cite>Gordon Ramsay</cite></blockquote></h2>
+					      </div>
+
+					    </div>
+
+					  </li>
+
+					  <li data-orbit-slide="headline-2">
+					    
+					    <div class="row" id="restraunt">
+
+					      <div class="small-4 columns text-center" id="collumn1">
+					      	<!-- <h1>Gordon Ramsey</h1> -->
+					 
+					      	<img class= "text-center"src="data/pics/wolfgangpuck.png" id="chefImage" width="50%" height="50%">
+
+					      </div>
+
+					      <div class="small-8 columns text-center">
+					      	<h5><blockquote id="myBlockQuote"><i class="fa fa-quote-left fa-3x pull-left fa-border"></i>
+							Any time I want to inform millions of potential of our delicious daily special or a new menu item, I use wikiMenus. My customers love it and I love it too!</i> <i class="fa fa-quote-right fa-3x pull-right fa-border"></i></blockquote></h5>
+					      	<h2><blockquote><cite>Wolfgang Puck</cite></blockquote></h2>
+					      </div>
+
+					    </div>
+
+					  </li>
+
+					  <li data-orbit-slide="headline-3">
+					    
+					    <div class="row" id="restraunt">
+
+					      <div class="small-4 columns text-center" id="collumn1">
+					      <!-- 	<h1>Gordon Ramsey</h1> -->
+					 
+					      	<img class= "text-center"src="data/pics/anthony.png" id="chefImage" width="50%" height="50%">
+
+					      </div>
+
+					      <div class="small-8 columns">
+					      	<h5><blockquote id="myBlockQuote"><i class="fa fa-quote-left fa-3x pull-left fa-border"></i>
+							I travel all around the world and am never completely sure what to get. Wiki Menu has menus for the most obscure restraunts and I can always rely on their reviews to pick the best things to eat a potential restraunt. <i class="fa fa-quote-right fa-3x pull-right fa-border"></i></blockquote></h5>
+					      	<h2><blockquote><cite>Anthony Bordain</cite></blockquote></h2>
+					      	
+					      </div>
+
+					    </div>
+
+					  </li>
+					</ul>
 				</div>
 			</div>
 		</div>
-
 	</div>
 
-	
-	<div class="row" id="recTitleWrapper">
-			<div class="small-8 small-centered columns text-center">
-				<h3 id="recTitle">The best chefs and restraunts love wikiMenus! </h3>
+
+	<div class="row" id="teamSection">
+		<div class="small-12 columns">
+
+			<div class="row">
+				<div class="small-10 small-centered columns text-center">
+					<h3 class="title" id="teamTitle">Small Company with Big Dreams</h3>
+					<h4 class="subTitle" id="teamSubTitle">Like many startups, wikiMenus started with a conversation in a dorm room. We hope that one day it emcompasses restraunts and menus from the entire world. Hopefully it informs the world and its restraunts on exactly what's good and what's not!</h4>
+				</div>
+
 			</div>
-	</div>
-	
-<!-- 	<div class="row" id="slider"> -->
-		<!-- <div class="small-12 collumns"> -->
-	<div class="row">
-		<div class="small-10 small-centered columns text-center">
-			<ul class="example-orbit-content" data-orbit>
-			  
-			  <li data-orbit-slide="headline-1">
-			    
-			    <div class="row" id="restraunt">
 
-			      <div class="small-4 columns text-center" id="collumn1">
-			      	<!-- <h1>Gordon Ramsey</h1> -->
-			 
-			      	<img class= "text-center"src="data/pics/ramsay.png" id="chefImage" width="50%" height="50%">
 
-			      </div>
+			<div class="row">
 
-			      <div class="small-8 columns text-center">
-			      	<h2><blockquote>I travel all around the world and am never completely sure what to get. Wiki Menu has menus for the most obscure restraunts and I can always rely on their reviews to pick the best things to eat a potential restraunt. <cite>Gordon Ramsay</cite></blockquote></h2>
-			      </div>
+				<div class="small-6 columns text-center">
+					<h1 class="employeeName">Danish Noorani</h1>
+					<a href="#" data-reveal-id="DanishDescription"><img class= "employeePicture" id="employeePicture1" src="data/pics/Me2.jpg"> </a>
+				</div>
 
-			    </div>
+				<div class="small-6 columns text-center">
+					<h1 class="employeeName">Khurram Ghullamani</h1>
+					<a href="#" data-reveal-id="KhurramDescription"><img class= "employeePicture" id="employeePicture1" src="data/pics/Khurram.png"> </a>
+				</div>
+				
 
-			  </li>
-
-			  <li data-orbit-slide="headline-2">
-			    
-			    <div class="row" id="restraunt">
-
-			      <div class="small-4 columns text-center" id="collumn1">
-			      	<!-- <h1>Gordon Ramsey</h1> -->
-			 
-			      	<img class= "text-center"src="data/pics/wolfgangpuck.png" id="chefImage" width="50%" height="50%">
-
-			      </div>
-
-			      <div class="small-8 columns text-center">
-			      	<h2><blockquote>Any time I want to inform millions of potential of our delicious daily special or a new menu item, I use wikiMenus. My customers love it and I love it too!<cite>Wolfgang Puck</cite></blockquote></h2>
-			      </div>
-
-			    </div>
-
-			  </li>
-
-			  <li data-orbit-slide="headline-3">
-			    
-			    <div class="row" id="restraunt">
-
-			      <div class="small-4 columns text-center" id="collumn1">
-			      <!-- 	<h1>Gordon Ramsey</h1> -->
-			 
-			      	<img class= "text-center"src="data/pics/anthony.png" id="chefImage" width="50%" height="50%">
-
-			      </div>
-
-			      <div class="small-8 columns">
-			      	<h2><blockquote>I travel all around the world and am never completely sure what to get. Wiki Menu has menus for the most obscure restraunts and I can always rely on their reviews to pick the best things to eat a potential restraunt.<cite>Anthony Bordain</cite></blockquote></h2>
-			      </div>
-
-			    </div>
-
-			  </li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="flex-video">
+			</div>
 		
-       <video autoplay loop muted id="bizVideo" src="data/videos/openTableVideo.mp4"></video>
-
-	</div>
-
 
 	
 
-	<div class="row">
-		<div class="small-10 small-centered columns text-center">
-			<h3 id="teamTitle">Small Company with Big Dreams</h3>
-			<h4 id="teamSubTitle">Like many startups, wikiMenus started with a conversation in a dorm room. We hope that one day it emcompasses restraunts and menus from the entire world. Hopefully it informs the world and its restraunts on exactly what's good and what's not!</h4>
-		</div>
+			<div class="row" id="meetTheTeam">
 
+				<div class="small-6 columns text-center">
+					<h1 class="employeeName">Angela Ding</h1>
+					<a href="#" data-reveal-id="AngelaDescription"><img class= "employeePicture" id="employeePicture1" src="data/pics/rachel.jpeg"> </a>
+				</div>
+
+				<div class="small-6 columns text-center">
+					<h1 class="employeeName">April Xu</h1>
+					<a href="#" data-reveal-id="AprilDescription"><img class= "employeePicture" id="employeePicture1" src="data/pics/felicitySmoke.jpg"> </a>
+				</div>
+				
+
+			</div>
+
+		</div>
 	</div>
 
+	<div class="row" id="videoSection">
+		<div class="small-10 small-centered columns">
+			<div class="row">
+				<div class="small-12 small-centered columns text-center">
+					
+					<h3 class="title">Check us out in action</h3>
+					<h4 class="subTitle" id="videoSubTitle"> If you own a restraunt you can personally work with us to provide your customers with your most up to date menus. Thats not all! We will provide with an interface that will give you the most up to date data on exactly which menu items are good and whats not. Don't think you need it, look what some of your contemporaries have to say about us. </h4>
+							
+				</div>
+			</div>
+			<div class="flex-video">
+		       <video autoplay loop muted id="bizVideo" src="data/videos/openTableVideo.mp4"></video>
+			</div>
 
-	<div class="row">
-
-		<div class="small-6 columns text-center">
-			<h1 class="employeeName">Danish Noorani</h1>
-			<a href="#" data-reveal-id="DanishDescription"><img class= "employeePicture" id="employeePicture1" src="data/pics/Me2.jpg"> </a>
 		</div>
-
-		<div class="small-6 columns text-center">
-			<h1 class="employeeName">Khurram Ghullamani</h1>
-			<a href="#" data-reveal-id="KhurramDescription"><img class= "employeePicture" id="employeePicture1" src="data/pics/Khurram.png"> </a>
-		</div>
-		
-
 	</div>
 
 	
 
-	<div class="row" id="meetTheTeam">
-
-		<div class="small-6 columns text-center">
-			<h1 class="employeeName">Angela Ding</h1>
-			<a href="#" data-reveal-id="AngelaDescription"><img class= "employeePicture" id="employeePicture1" src="data/pics/rachel.jpeg"> </a>
-		</div>
-
-		<div class="small-6 columns text-center">
-			<h1 class="employeeName">April Xu</h1>
-			<a href="#" data-reveal-id="AprilDescription"><img class= "employeePicture" id="employeePicture1" src="data/pics/felicitySmoke.jpg"> </a>
-		</div>
-		
-
-	</div>
+	
 	<!-- <div class="row" id="subcriptionSection">
 
 		<div class="small-12 medium-6 columns">
@@ -293,7 +334,7 @@
 	</div> -->
 
 	
-	<footer class="footer">
+	<footer class="footer" id="contactSection">
 		  <div class="row">
 		    <div class="small-12 medium-3 large-4 columns">
 		     <i class="fa fa-cutlery"></i>
@@ -324,7 +365,7 @@
 		      <ul>
 		    </div>
 		  </div>
-</footer>
+	</footer>
 
 
 
