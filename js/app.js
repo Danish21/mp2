@@ -25,6 +25,10 @@ app.config(['$routeProvider',
         templateUrl: 'partials/details.html',
         controller: 'movieDetailController'
       }).
+       when('/quiz', {
+        templateUrl: 'partials/quiz.html',
+        controller: 'movieTimeLineController'
+      }).
       otherwise({
         redirectTo: '/movies'
       });

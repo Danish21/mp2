@@ -46,11 +46,35 @@ movieControllers.controller('movieDetailController', ['$scope', '$routeParams', 
     });
 
         $scope.imdbID = $routeParams.imdbID;
-        // $scope.hello = "hello";
+}]);
+
+
+movieControllers.controller('movieTimeLineController', ['$scope', '$routeParams', '$http',
+    function($scope, $routeParams, $http) {
+        $http.get('./data/imdb250.json').success(function(data) {
+        $scope.movies = data;
+
+        var shuffleArray = function(array) {
+            var m = array.length, t, i;
+          // While there remain elements to shuffle
+            while (m) {
+            // Pick a remaining element…
+            i = Math.floor(Math.random() * m--);
+            // And swap it with the current element.
+            t = array[m];
+            array[m] = array[i];
+            array[i] = t;
+          }
+          console.log(array.pop());
+          return array;
+
+        }
+
+         shuffleArray($scope.movies);
+    });
    
-
-  }]);
-
+    
+}]);
 // app.controller('movieController', ['$scope', '$http', function($scope, $http) {
 
 //     $http.get('./data/imdb250.json').success(function(data) {
