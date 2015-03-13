@@ -13,11 +13,24 @@
 .listImage{
 	height: 50%;
 	width: 50%;
+	transition: all .2s ease-in-out;
 }
-// .listImage:hover{
-// 	opacity: 0.5;
-// }
+.listImage:hover{
+	height: scale(1,1.2);
+	width: scale(1,1.2);
+	z-index:99;
+	
+	transform: scale(1.2);
+}
 
+.galleryImage{
+	transition: all .2s ease-in-out;
+}
+.galleryImage:hover{
+	height: scale(1,1.5);
+	width: scale(1,1.5);
+	transform: scale(1.5);
+}
 .arrows{
 	font-size: 50px;
 }
@@ -46,14 +59,14 @@
 }
 
 
-///animations
+///animations --PhoneCat Tutorial
 .movie-listing.ng-enter,
 .movie-listing.ng-leave,
 .movie-listing.ng-move {
-  -webkit-transition: 1.0s linear all;
-  -moz-transition: 1.0s linear all;
-  -o-transition: 1.0s linear all;
-  transition: 1.0s linear all;
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
+  -o-transition: 0.2s linear all;
+  transition: 0.2s linear all;
 }
 
 .movie-listing.ng-enter,
@@ -80,6 +93,8 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+
 ///View Animation
 
 .view-container {
@@ -95,18 +110,18 @@
 }
 
 .view-frame.ng-enter {
-  -webkit-animation: 1.5s fade-in;
-  -moz-animation: 1.5s fade-in;
-  -o-animation: 1.5s fade-in;
-  animation: 1.5s fade-in;
+  -webkit-animation: 2.5s fade-in;
+  -moz-animation: 2.5s fade-in;
+  -o-animation: 2.5s fade-in;
+  animation: 2.5s fade-in;
   z-index: 100;
 }
 
 .view-frame.ng-leave {
-  -webkit-animation: 1.5s fade-out;
-  -moz-animation: 1.5s fade-out;
-  -o-animation: 1.5s fade-out;
-  animation: 1.5s fade-out;
+  -webkit-animation: 2.5s fade-out;
+  -moz-animation: 2.5s fade-out;
+  -o-animation: 2.5s fade-out;
+  animation: 2.5s fade-out;
   z-index:99;
 }
 
@@ -136,13 +151,7 @@
   to { opacity: 0; }
 }
 
-// .listDiv{
-// 	background-color: grey;
-// }
-////////////////
-// .icon:hover{
-// 	font-color: red;
-// }
+////WikiMenus Stylings
 .mainLogo{
 
 	width: 70px;
@@ -178,8 +187,7 @@ header{
 }
 
 .title{
-	color: #af0606;//#555555;//rgb(46, 59, 78);
-	// font-size: 28px;
+	color: #af0606;
 	line-height: $defaultLineHeight;
 	font-weight: $defaultFontWeight;
 	margin-top: 100px;
@@ -259,8 +267,6 @@ header{
 	text-align: center;
 	position: relative;
 	font-size: 20px;
-	line-height: $defaultLineHeight;
-	font-weight: $defaultFontWeight;
 	margin-top: 5px;
 	font-family: $menuFonts;
 }
@@ -269,7 +275,6 @@ header{
 	width: 100px;
 	height: 100px;
 	@include border-radius(50%);
-	// border: solid red;
 }
 
 @media only screen and (min-width: 40.063em) {

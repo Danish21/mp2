@@ -4,12 +4,17 @@
           <!-- <div ng-repeat="movie in movies | filter: imdbID | orderBy: 'imdbRating' : true | limitTo:-2 "> -->
                 <div class="row">
                   <div class="small-8 small-centered columns text-center">
-                    
-                    <h3> Guess the Movie</h3>
-                    <h6>{{movies[0].plot}}</h6>
-                    <h6>ReleaseDate: {{movies[0].released}}</h6>
-                    <h6>Runtime: {{movies[0].runtime}}</h6>
-                    <h6>Awards: {{movies[0].awards}}</h6>
+                    <!-- <h3> Guess the Movie</h3> -->
+                    <form>
+                      <fieldset>
+                        <legend>Guess the Movie</legend>
+                        <h6>{{movies[0].plot}}</h6>
+                        <h6>ReleaseDate: {{movies[0].released}}</h6>
+                        <h6>Runtime: {{movies[0].runtime}}</h6>
+                        <h6>Awards: {{movies[0].awards}}</h6>
+                      </fieldset>
+                    </form>
+
                   </div>
                 </div>
                     <!-- <img src="data/images/{{movie.imdbID}}.jpg" > -->
@@ -18,10 +23,10 @@
 
                       <div class="row">
                        
-                        <div class="small-6 small-centered columns text-center">
+                        <div class="small-6 columns text-center">
                             <h4><a href="#/movies/{{movies[0].imdbID}}">Reveal Anwser</a></h1>
                         </div>
-                        <div class="small-6 small-centered columns text-center">
+                        <div class="small-6 columns text-center">
                             <h4><a href="javascript:history.go(0)">New Question</a></h1>
                         </div>
 
@@ -29,6 +34,8 @@
 
                   </div>
                 </div>
+
+                
        
 
 </div>

@@ -25,10 +25,10 @@
          <div class="small-10 small-centered columns">  
              
                   <ul class="small-block-grid-5">  
-                          <li ng-repeat="movie in courseInfo | filter: inputValue | filter: $parent.genre" class="repeated-movie">
+                          <li ng-repeat="movie in courseInfo | filter: inputValue | filter: $parent.genre" class="movie-listing">
 
                               <a href="#/movies/{{movie.imdbID}}">             
-                                 <img src="data/images/{{movie.imdbID}}.jpg" >
+                                 <img class="galleryImage"src="data/images/{{movie.imdbID}}.jpg" >
                               </a>
                             
                           </li>
